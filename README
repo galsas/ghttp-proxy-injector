@@ -1,0 +1,10 @@
+HTTP proxy for inject javascript
+
+Usage: cli [options]
+
+  Options:
+
+    -h, --help              output usage information
+    -V, --version           output the version number
+    -p, --port <n>          the proxy port for listen
+    -i, --inject-js [path]  the js file to inject
