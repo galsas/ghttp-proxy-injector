@@ -1,4 +1,4 @@
-HTTP proxy for inject javascript
+HTTP proxy to inject javascript
 
 Usage: cli [options]
 
