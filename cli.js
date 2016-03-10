@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const httpProxy = require('http-proxy');
 const connect = require('connect');
 const http = require('http');
@@ -20,6 +22,12 @@ if (!program.port) {
 }
 
 var proxy = httpProxy.createProxyServer({}); //create new server proxy
+
+proxy.on('error', function(err, req, res) {
+    console.error(err);
+    responseError(err.toString(), res);
+});
+
 var app = connect(); //create connect middleware
 
 if(program.injectJs) { //if js file is provided
@@ -70,6 +78,14 @@ app.use(function(req, res) {
         target: location
     });
 });
+
+function responseError(errStr, res) {
+    res.writeHead(500, {
+        'Content-Type': 'text/html'
+    });
+
+  res.end('Error from proxy:</br><b>' + errStr + '</b>');
+}
 
 var server = http.createServer(app); //create new http server with the middleware
 
