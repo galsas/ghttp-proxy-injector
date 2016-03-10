@@ -1,6 +1,9 @@
 HTTP proxy to inject javascript
 
-Usage: cli [options]
+Install as global:
+	npm install -g ghttp-proxy-injector
+
+Usage: ghttp-proxy-injector [options]
 
   Options:
 

@@ -1,6 +1,6 @@
 {
   "name": "ghttp-proxy-injector",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "HTTP proxy to inject javascript",
   "main": "cli.js",
   "scripts": {
