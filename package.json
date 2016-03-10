@@ -1,6 +1,6 @@
 {
   "name": "ghttp-proxy-injector",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "HTTP proxy to inject javascript",
   "main": "cli.js",
   "scripts": {
@@ -10,6 +10,10 @@
     "ghttp-proxy-injector": "cli.js"
   },
   "author": "Galsas",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/galsas/ghttp-proxy-injector"
+  },
   "license": "MIT",
   "dependencies": {
     "commander": "^2.8.1",
